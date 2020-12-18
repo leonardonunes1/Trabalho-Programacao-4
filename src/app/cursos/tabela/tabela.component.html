@@ -1,0 +1,19 @@
+<h2>{{titulo}}</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>NOME</th>
+        <th>DESCRICAO</th>
+        <th colspan="2" style="text-align: center">AÇÕES</th>
+    </tr>
+    <tr *ngFor='let curso of (cursos)'>
+        <td>{{curso._id}}</td>
+        <td>{{curso.name}}</td>
+        <td>{{curso.description}}</td>
+        <td style="text-align: center"><a [routerLink]="'/edit/'+curso._id">Editar</a></td>
+        <td style="text-align: center"><a [routerLink]="'/tabela'" (click)="deletar(curso._id)">Excluir</a> </td>    
+    </tr>
+</table>
+
+<a routerLink="/novo">Novo Curso</a>

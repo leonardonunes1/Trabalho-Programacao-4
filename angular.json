@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "Nova"
+  "defaultProject": "Nova",
+  "cli": {
+    "analytics": false
+  }
 }
